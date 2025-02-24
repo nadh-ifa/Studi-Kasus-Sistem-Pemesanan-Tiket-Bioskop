@@ -1,0 +1,87 @@
+public class BioskopABC {
+    public static void main(String[] args) {
+        // Membuat objek Film
+        Film film1 = new Film();
+        film1.setJudul("Dilan");
+        film1.setGenre("Romance");
+        film1.setJam("12:00");
+        film1.setHarga(50000);
+
+        Film film2 = new Film();
+        film2.setJudul("Frozen");
+        film2.setGenre("Animation");
+        film2.setJam("14:30");
+        film2.setHarga(40000);
+
+        Film film3 = new Film();
+        film3.setJudul("Conjuring");
+        film3.setGenre("Horror");
+        film3.setJam("17:00");
+        film3.setHarga(45000);
+
+        // Membuat objek Studio
+        Studio studio1 = new Studio();
+        studio1.setNomorStudio(1);
+        studio1.setKapasitas(100);
+        studio1.setFilm(film1);
+
+        Studio studio2 = new Studio();
+        studio2.setNomorStudio(2);
+        studio2.setKapasitas(80);
+        studio2.setFilm(film2);
+
+        Studio studio3 = new Studio();
+        studio3.setNomorStudio(3);
+        studio3.setKapasitas(90);
+        studio3.setFilm(film3);
+
+        // Membuat objek Penonton
+        Penonton penonton1 = new Penonton();
+        penonton1.setNama("Budi");
+
+        Penonton penonton2 = new Penonton();
+        penonton2.setNama("Siregar");
+
+        Penonton penonton3 = new Penonton();
+        penonton3.setNama("Kapal Lawd");
+
+        // Membuat objek Tiket
+        Tiket tiket1 = new Tiket();
+        tiket1.setNomorTiket(1);
+        tiket1.setFilm(film1);
+        tiket1.setStudio(studio1);
+        tiket1.setNomorKursi(5);
+        tiket1.setPenonton(penonton1);
+
+        Tiket tiket2 = new Tiket();
+        tiket2.setNomorTiket(2);
+        tiket2.setFilm(film2);
+        tiket2.setStudio(studio2);
+        tiket2.setNomorKursi(10);
+        tiket2.setPenonton(penonton2);
+
+        Tiket tiket3 = new Tiket();
+        tiket3.setNomorTiket(3);
+        tiket3.setFilm(film3);
+        tiket3.setStudio(studio3);
+        tiket3.setNomorKursi(20);
+        tiket3.setPenonton(penonton3);
+
+        // Menampilkan informasi studio
+        System.out.println("--- Informasi Studio ---");
+        studio1.displayInfo();
+        System.out.println();
+        studio2.displayInfo();
+        System.out.println();
+        studio3.displayInfo();
+        System.out.println();
+
+        // Menampilkan informasi tiket yang telah dipesan
+        System.out.println("--- Tiket yang Telah Dipesan ---");
+        tiket1.displayInfo();
+        System.out.println();
+        tiket2.displayInfo();
+        System.out.println();
+        tiket3.displayInfo();
+    }
+}
